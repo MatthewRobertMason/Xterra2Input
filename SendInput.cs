@@ -36,7 +36,7 @@ namespace Xterra2Input
 
             Input.type = 1; // 1 = Keyboard Input
             Input.U.ki.wScan = key;
-            Input.U.ki.dwFlags = KEYEVENTF.KEYUP;
+            Input.U.ki.dwFlags = KEYEVENTF.KEYUP | KEYEVENTF.SCANCODE;
             Inputs[0] = Input;
 
             SendInput(1, Inputs, INPUT.Size);
